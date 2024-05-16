@@ -9,11 +9,13 @@ export function ThreeDCardDemo({
   architecture_title,
   architecture_description,
   architecture_image_path,
+  link,
 }: {
   architecture_name: string;
   architecture_title: string;
   architecture_description: string;
   architecture_image_path: string;
+  link: string;
 }) {
   return (
     <CardContainer className="inter-var">
@@ -47,6 +49,7 @@ export function ThreeDCardDemo({
         </CardItem>
         <div className="flex justify-center items-center mt-20">
           <CardItem
+            link={link}
             translateZ={20}
             translateY={-40}
             as="button"
