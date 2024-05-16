@@ -26,7 +26,7 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <nav className="fixed z-10 top-2 right-2">
+        <nav className="fixed z-20 top-2 right-2">
           <Menu />
         </nav>
         <main>{children}</main>
