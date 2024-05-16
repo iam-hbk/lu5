@@ -11,12 +11,17 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import React from "react";
 
 type Props = {};
 
 const Menu = (props: Props) => {
+  const pathname = usePathname();
+  if (pathname === "/") return null;
+  
+
   return (
     <NavigationMenu className="m-2">
       <NavigationMenuList>
