@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import Link from "next/link";
 import React, {
   createContext,
   useState,
@@ -104,6 +105,7 @@ export const CardItem = ({
   rotateX = 0,
   rotateY = 0,
   rotateZ = 0,
+  link,
   ...rest
 }: {
   as?: React.ElementType;
@@ -115,6 +117,7 @@ export const CardItem = ({
   rotateX?: number | string;
   rotateY?: number | string;
   rotateZ?: number | string;
+  link?: string;
   [key: string]: any;
 }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -133,6 +136,19 @@ export const CardItem = ({
     }
   };
 
+  if (link) {
+    return (
+      <Link href={link}>
+        <Tag
+          ref={ref}
+          className={cn("w-fit transition duration-200 ease-linear bg-red-600", className)}
+          {...rest}
+        >
+          {children}
+        </Tag>
+      </Link>
+    );
+  }
   return (
     <Tag
       ref={ref}
