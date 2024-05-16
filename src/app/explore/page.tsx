@@ -1,0 +1,25 @@
+import React from "react";
+import { ThreeDCardDemo } from "@/components/explore_cards";
+import { WavyBackground } from "@/components/ui/wavy-background";
+type Props = {};
+
+const Page = (props: Props) => {
+  return (
+    <WavyBackground backgroundFill="white" blur={5} waveWidth={100} className="flex flex-row h-screen w-screen items-center justify-center gap-10">
+      <ThreeDCardDemo
+        architecture_image_path="/network.jpg"
+        architecture_name="Network"
+        architecture_title="Network Architecture"
+        architecture_description="Network Architecture is the design of a computer network. It is a framework for the specification of a network's physical components and their functional organization and configuration, its operational principles and procedures, as well as data formats used in its operation."
+      />
+      <ThreeDCardDemo
+        architecture_image_path="/security.jpg"
+        architecture_name="Security"
+        architecture_title="Security Architecture"
+        architecture_description="Security Architecture is the design of a secure network. It is a framework for the specification of a network's security components and their functional organization and configuration, its operational principles and procedures, as well as data formats used in its operation."
+      />
+    </WavyBackground>
+  );
+};
+
+export default Page;
