@@ -58,10 +58,12 @@
   }
 }
 /* Custom CSS to hide the scrollbar */
-.hide-scrollbar::-webkit-scrollbar {
+
+.hide-scrollbar::-webkit-scrollbar-track {
   display: none; /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
 }
+
 .hide-scrollbar {
   -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
-  scrollbar-width: none;     /* Hide scrollbar for Firefox */
+  scrollbar-track-color: transparent;
 }

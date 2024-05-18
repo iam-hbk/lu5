@@ -1,20 +1,10 @@
 "use client";
-import { TabletteScroll } from "@/components/tablette-scroll-animation";
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "@/components/ui/alert-dialog";
-import { Button } from "@/components/ui/button";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { Badge } from "@/components/ui/badge";
+
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import { TracingBeam } from "@/components/ui/tracing-beam";
+import { ScrollTextIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -23,31 +13,45 @@ type Props = {};
 
 function Network({}: Props) {
   return (
-      <div className="flex flex-col p-5 items-center min-h-screen">
-        <h2 className="scroll-m-20 mt-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-          MaaS Network Architecture
-        </h2>
-        <p className="text-xl text-muted-foreground w-[60%] p-8 text-center max-w-md min-w-[300px]">
-          Build the components of the MaaS Network Architecture Diagram step by
-          step, understanding the reason why they are chosen and what role they
-          play in the architecture 🚀
-        </p>
-        <StickyScroll content={content} />
+    <div className="flex flex-col p-5 items-center min-h-screen">
+      <h2 className="scroll-m-20 mt-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+        MaaS Network Architecture
+      </h2>
+      <p className="text-xl text-muted-foreground w-[60%] p-8 text-center max-w-md min-w-[300px]">
+        Build the components of the MaaS Network Architecture Diagram step by
+        step, understanding the reason why they are chosen and what role they
+        play in the architecture 🚀
+      </p>
+      <Alert className="max-w-screen-md m-2 mb-5">
+        <ScrollTextIcon className="h-4 w-4" />
+        <AlertTitle>Heads up!</AlertTitle>
+        <AlertDescription className="flex flex-row gap-1 items-center justify-start">
+          <span>You can scroll in the explanation </span>
+          <span className="p-1 border rounded-md bg-primary/5 text-xs">Explanation Area</span>
+        </AlertDescription>
+      </Alert>
 
-        <MacbookScroll
-          title={
-            <span>
-              This Macbook is built with Tailwindcss. <br /> No kidding.
-            </span>
-          }
-          badge={
-            <Link href="https://peerlist.io/manuarora">Heritier Kaumbu</Link>
-          }
-          src={`/network.jpg`}
-          showGradient={true}
-        />
-        
+      <div className="flex items-start  flex-col justify-center">
+        <Badge className="p-2 mb-1" variant="outline">
+          <ScrollTextIcon className="h-4 w-4" />
+          Explanation Area
+        </Badge>
+        <StickyScroll content={content} />
       </div>
+
+      <MacbookScroll
+        title={
+          <span>
+            This Macbook is built with Tailwindcss. <br /> No kidding.
+          </span>
+        }
+        badge={
+          <Link href="https://peerlist.io/manuarora">Heritier Kaumbu</Link>
+        }
+        src={`/network.jpg`}
+        showGradient={true}
+      />
+    </div>
   );
 }
 
