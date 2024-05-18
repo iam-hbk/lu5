@@ -57,3 +57,11 @@
     @apply bg-background text-foreground;
   }
 }
+/* Custom CSS to hide the scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none;     /* Hide scrollbar for Firefox */
+}

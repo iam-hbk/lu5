@@ -1,4 +1,5 @@
 "use client";
+import { TabletteScroll } from "@/components/tablette-scroll-animation";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -12,7 +13,9 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
+import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import { TracingBeam } from "@/components/ui/tracing-beam";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -20,7 +23,6 @@ type Props = {};
 
 function Network({}: Props) {
   return (
-    <TracingBeam className="p-5">
       <div className="flex flex-col p-5 items-center min-h-screen">
         <h2 className="scroll-m-20 mt-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
           MaaS Network Architecture
@@ -30,6 +32,8 @@ function Network({}: Props) {
           step, understanding the reason why they are chosen and what role they
           play in the architecture 🚀
         </p>
+        <StickyScroll content={content} />
+
         <MacbookScroll
           title={
             <span>
@@ -42,33 +46,58 @@ function Network({}: Props) {
           src={`/network.jpg`}
           showGradient={true}
         />
-        <div className="flex flex-row gap-2">
-          <AlertDialog>
-            <AlertDialogTrigger asChild>
-              <Button variant="outline">Learn More</Button>
-            </AlertDialogTrigger>
-            <AlertDialogContent>
-              <AlertDialogHeader>
-                <AlertDialogTitle>Step 1</AlertDialogTitle>
-                <AlertDialogDescription>
-                  At this point, we are going to learn about the first step in
-                  the MaaS Network Architecture Diagram. It entails the design
-                  of a computer network. It is a framework for the specification
-                  of a network's physical components and their functional
-                  organization and configuration, its operational principles and
-                  procedures, as well as data formats used in its operation.
-                </AlertDialogDescription>
-              </AlertDialogHeader>
-              <AlertDialogFooter>
-                <AlertDialogAction>Okay</AlertDialogAction>
-              </AlertDialogFooter>
-            </AlertDialogContent>
-          </AlertDialog>
-          <Button variant={"outline"}>Next Step →</Button>
-        </div>
+        
       </div>
-    </TracingBeam>
   );
 }
 
 export default Network;
+
+const content = [
+  {
+    title: "Collaborative Editing",
+    description:
+      "Work together in real time with your team, clients, and stakeholders. Collaborate on documents, share ideas, and make decisions quickly. With our platform, you can streamline your workflow and increase productivity.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Collaborative Editing
+      </div>
+    ),
+  },
+  {
+    title: "Real time changes",
+    description:
+      "See changes as they happen. With our platform, you can track every modification in real time. No more confusion about the latest version of your project. Say goodbye to the chaos of version control and embrace the simplicity of real-time updates.",
+    content: (
+      <div className="h-full w-full  flex items-center justify-center text-white">
+        <Image
+          src="/security.jpg"
+          width={300}
+          height={300}
+          className="h-full w-full object-cover"
+          alt="linear board demo"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Version control",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--orange-500),var(--yellow-500))] flex items-center justify-center text-white">
+        Version control
+      </div>
+    ),
+  },
+  {
+    title: "Running out of content",
+    description:
+      "Experience real-time updates and never stress about version control again. Our platform ensures that you're always working on the most recent version of your project, eliminating the need for constant manual updates. Stay in the loop, keep your team aligned, and maintain the flow of your work without any interruptions.",
+    content: (
+      <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
+        Running out of content
+      </div>
+    ),
+  },
+];
