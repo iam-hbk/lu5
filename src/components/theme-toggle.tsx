@@ -17,7 +17,7 @@ export function ModeToggle() {
     //   <DropdownMenuTrigger asChild>
     <Button
       variant={"outline"}
-      className="rounded-lg border-none flex gap-3"
+      className="rounded-lg border-none flex gap-3 dark:bg-primary"
       // size="icon"
       onClick={toggleTheme}
     >

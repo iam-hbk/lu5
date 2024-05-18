@@ -87,7 +87,7 @@ export const Lid = ({
         className="h-[12rem] w-[32rem]  relative"
       >
         <div className="absolute inset-0 rounded-lg flex items-center justify-center">
-          <span className="text-white">HBK</span>
+          {/* <span className="text-white">HBK</span> */}
         </div>
       </div>
       <motion.div

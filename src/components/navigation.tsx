@@ -20,18 +20,19 @@ type Props = {};
 
 const Menu = (props: Props) => {
   const pathname = usePathname();
-  if (pathname === "/") return null;
 
   return (
     <NavigationMenu className="m-2">
       <NavigationMenuList>
-        <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              ← Go back to the Home Page
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
+        {pathname === "/" ? null : (
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                ← Go back to the Home Page
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        )}
         <NavigationMenuItem>
           <ModeToggle />
         </NavigationMenuItem>

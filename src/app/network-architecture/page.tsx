@@ -1,5 +1,18 @@
+"use client";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import { MacbookScroll } from "@/components/ui/macbook-scroll";
+import { TracingBeam } from "@/components/ui/tracing-beam";
 import Link from "next/link";
 import React from "react";
 
@@ -7,7 +20,7 @@ type Props = {};
 
 function Network({}: Props) {
   return (
-    <div className="p-5">
+    <TracingBeam className="p-5">
       <div className="flex flex-col p-5 items-center min-h-screen">
         <h2 className="scroll-m-20 mt-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
           MaaS Network Architecture
@@ -29,12 +42,32 @@ function Network({}: Props) {
           src={`/network.jpg`}
           showGradient={true}
         />
-        <div>
-          <Button className="bg-primary">Learn More ℹ</Button>
-          <Button className="bg-secondary">Next Step →</Button>
+        <div className="flex flex-row gap-2">
+          <AlertDialog>
+            <AlertDialogTrigger asChild>
+              <Button variant="outline">Learn More</Button>
+            </AlertDialogTrigger>
+            <AlertDialogContent>
+              <AlertDialogHeader>
+                <AlertDialogTitle>Step 1</AlertDialogTitle>
+                <AlertDialogDescription>
+                  At this point, we are going to learn about the first step in
+                  the MaaS Network Architecture Diagram. It entails the design
+                  of a computer network. It is a framework for the specification
+                  of a network's physical components and their functional
+                  organization and configuration, its operational principles and
+                  procedures, as well as data formats used in its operation.
+                </AlertDialogDescription>
+              </AlertDialogHeader>
+              <AlertDialogFooter>
+                <AlertDialogAction>Okay</AlertDialogAction>
+              </AlertDialogFooter>
+            </AlertDialogContent>
+          </AlertDialog>
+          <Button variant={"outline"}>Next Step →</Button>
         </div>
       </div>
-    </div>
+    </TracingBeam>
   );
 }
 
