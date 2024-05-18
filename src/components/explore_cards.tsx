@@ -40,6 +40,7 @@ export function ThreeDCardDemo({
           className="w-full mt-4"
         >
           <Image
+            priority
             src={architecture_image_path}
             height="1000"
             width="1000"

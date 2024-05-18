@@ -9,7 +9,7 @@ const Page = (props: Props) => {
       backgroundFill="white"
       blur={5}
       waveWidth={100}
-      className="flex flex-row h-screen w-screen items-center justify-center gap-10"
+      className="flex md:flex-row flex-col h-screen w-screen items-center justify-center md:gap-10"
     >
       <ThreeDCardDemo
         link="/network-architecture"
