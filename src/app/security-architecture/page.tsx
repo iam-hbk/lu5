@@ -58,7 +58,7 @@ function Security() {
           }
         >
           <Image
-            src={`/security_final.jpg`}
+            src={`/Security_final.jpg`}
             alt="hero"
             height={700}
             width={400}
@@ -89,7 +89,7 @@ const content = [
         <Player
           autoplay
           loop
-          src="./encryption.json"
+          src="/encryption.json"
           style={{ height: "300px", width: "300px" }}
         ></Player>
       </div>
@@ -104,7 +104,7 @@ const content = [
         <Player
           autoplay
           loop
-          src="./network.json"
+          src="/network.json"
           style={{ height: "200px", width: "200px" }}
         ></Player>
       </div>
@@ -119,7 +119,7 @@ const content = [
         <Player
           autoplay
           loop
-          src="./vpn.json"
+          src="/vpn.json"
           style={{ height: "200px", width: "200px" }}
         ></Player>
       </div>
@@ -134,7 +134,7 @@ const content = [
         <Player
           autoplay
           loop
-          src="./firewall.json"
+          src="/firewall.json"
           style={{ height: "300px", width: "300px" }}
         ></Player>
       </div>
@@ -149,7 +149,7 @@ const content = [
         <Player
           autoplay
           loop
-          src="./honeypot.json"
+          src="/honeypot.json"
           style={{ height: "300px", width: "300px" }}
         ></Player>
       </div>
@@ -164,7 +164,7 @@ const content = [
         <Player
           autoplay
           loop
-          src="./backup.json"
+          src="/backup.json"
           style={{ height: "200px", width: "2x00px" }}
         ></Player>
       </div>
@@ -179,7 +179,7 @@ const content = [
         <Player
           autoplay
           loop
-          src="./2fa.json"
+          src="/2fa.json"
           style={{ height: "200px", width: "2x00px" }}
         ></Player>
       </div>
@@ -194,7 +194,7 @@ const content = [
         <Player
           autoplay
           loop
-          src="./monitoring.json"
+          src="/monitoring.json"
           style={{ height: "200px", width: "2x00px" }}
         ></Player>
       </div>
