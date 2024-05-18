@@ -10,6 +10,8 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
 import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { Meteors } from "@/components/ui/meteors";
+import { TabletteScroll } from "@/components/tablette-scroll-animation";
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 
 function Security() {
   return (
@@ -20,8 +22,9 @@ function Security() {
           MaaS Security Architecture
         </h2>
         <p className="text-xl text-white w-[60%] p-8 text-center max-w-md min-w-[500px]">
-          Understanding each component of the security architecture and the reason why they are chosen and what role they
-          play in the architecture 🚀
+          Understanding each component of the security architecture and the
+          reason why they are chosen and what role they play in the architecture
+          🚀
         </p>
         <Alert className="max-w-screen-md m-2 mb-5">
           <ScrollTextIcon className="h-4 w-4" />
@@ -41,18 +44,34 @@ function Security() {
           </Badge>
           <StickyScroll content={content} />
         </div>
-        <h2 className="scroll-m-20 mt-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-          Final Architecture
-        </h2>
 
+        <ContainerScroll
+          titleComponent={
+            <>
+              <h1 className="text-4xl font-semibold text-black dark:text-white">
+                Final <br />
+                <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                  Security Architecture
+                </span>
+              </h1>
+            </>
+          }
+        >
+          <Image
+            src={`/security_final.jpg`}
+            alt="hero"
+            height={700}
+            width={400}
+            className="mx-auto rounded-2xl object-cover h-full object-left-top"
+            draggable={true}
+          />
+        </ContainerScroll>
         <Image
           alt="security_final"
           src="/security_final.jpg"
           width={500}
           height={500}
         />
-
-        <MacbookScroll src={`/security_final.jpg`} showGradient={true} />
       </div>
     </FollowerPointerCard>
   );
