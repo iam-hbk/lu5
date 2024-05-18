@@ -54,7 +54,7 @@ export function ThreeDCardDemo({
             translateZ={20}
             translateY={-40}
             as="button"
-            className="px-4 py-2 rounded-xl bg-primary text-primary-foreground text-xs font-bold"
+            className="px-4 py-2 rounded-xl bg-primary text-primary-foreground text-xs "
           >
             Explore the {architecture_name} Architecture
           </CardItem>
