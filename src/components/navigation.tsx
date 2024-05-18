@@ -13,24 +13,28 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { ModeToggle } from "./theme-toggle";
 import React from "react";
 
 type Props = {};
 
 const Menu = (props: Props) => {
   const pathname = usePathname();
-  if (pathname === "/") return null;
-  
 
   return (
     <NavigationMenu className="m-2">
       <NavigationMenuList>
+        {pathname === "/" ? null : (
+          <NavigationMenuItem>
+            <Link href="/" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                ← Go back to the Home Page
+              </NavigationMenuLink>
+            </Link>
+          </NavigationMenuItem>
+        )}
         <NavigationMenuItem>
-          <Link href="/" legacyBehavior passHref>
-            <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-              ← Go back to the Home Page
-            </NavigationMenuLink>
-          </Link>
+          <ModeToggle />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

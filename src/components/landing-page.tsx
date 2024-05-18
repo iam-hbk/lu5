@@ -3,6 +3,7 @@ import { Highlight } from "./ui/hero-highlight";
 import { TypewriterEffectSmooth } from "./ui/typewriter-effect";
 import { Meteors } from "./ui/meteors";
 import Link from "next/link";
+import { Button } from "./ui/button";
 
 const words = [
   {
@@ -26,10 +27,10 @@ const words = [
 
 export function LandingPage() {
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center bg-gradient-to-r from-[#4338ca] to-[#89CFF0] px-4 md:px-6">
+    <div className="flex h-screen w-full flex-col items-center justify-center bg-gradient-to-r from-primary to-blue-700 dark:to-secondary px-4 md:px-6">
       <Meteors number={30} />
 
-      <div className="space-y-4 text-center">
+      <div className="space-y-4 text-center flex flex-col items-center">
         <h1 className="text-3xl font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl">
           Revolutionize your <Highlight>Mobility!</Highlight>
         </h1>
@@ -43,10 +44,11 @@ export function LandingPage() {
         </div>
 
         <Link href="/explore">
-          <div className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 font-medium text-[#4338ca] transition-colors duration-300 hover:bg-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 sm:px-6 sm:py-3">
-            <span className="mr-2 animate-bounce">Get Started</span>
-            <ArrowRightIcon className="h-4 w-4 sm:h-5 sm:w-5" />
-          </div>
+          <Button variant={"outline"} className="flex border-none flex-row dark:bg-primary">
+            <span className="mr-1 animate-bounce">Get</span>
+            <span className="mr-1 animate-bounce delay-75">Started</span>
+            <ArrowRightIcon className="h-4 w-4 animate-bounce delay-150 sm:h-5 sm:w-5" />
+          </Button>
         </Link>
       </div>
     </div>

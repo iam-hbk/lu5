@@ -4,72 +4,48 @@
 
 @layer base {
   :root {
-    /* Name: custom color palette
-       Author: Ilias Ism
-       URL: https://gradient.page */
-
-    /* CSS: .bg-gradient { background: var(--gradient) } */
-    --gradient: linear-gradient(to top left, #000428, #004e92);
-    --background: 249 100% 98.16%;
-    --foreground: 249 10% 0.32%;
-
-    --muted: 249 10% 90.8%;
-    --muted-foreground: 249 5% 40.8%;
-
-    --popover: 249 10% 90.8%;
-    --popover-foreground: 249 10% 0.4%;
-
-    --card: 249 10% 90.8%;
-    --card-foreground: 249 10% 0.4%;
-
-    --border: 249 15% 89.32%;
-    --input: 249 15% 89.32%;
-
-    --primary: 249 100% 8%;
-    --primary-foreground: 249 2% 90.8%;
-
-    --secondary: 249 5% 95.4%;
-    --secondary-foreground: 249 7% 10.8%;
-
-    --accent: 249 5% 95.4%;
-    --accent-foreground: 249 7% 10.8%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-
-    --ring: 249 100% 8%;
-
+    --background: 212 100% 95%;
+    --foreground: 212 5% 10%;
+    --card: 212 50% 90%;
+    --card-foreground: 212 5% 15%;
+    --popover: 212 100% 95%;
+    --popover-foreground: 212 100% 10%;
+    --primary: 212 89% 68%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 212 30% 70%;
+    --secondary-foreground: 0 0% 0%;
+    --muted: 174 30% 85%;
+    --muted-foreground: 212 5% 35%;
+    --accent: 174 30% 80%;
+    --accent-foreground: 212 5% 15%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 212 5% 90%;
+    --border: 212 30% 50%;
+    --input: 212 30% 26%;
+    --ring: 212 89% 68%;
     --radius: 0.5rem;
   }
-
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --background: 217 50% 10%;
+    --foreground: 217 5% 90%;
+    --card: 217 50% 10%;
+    --card-foreground: 217 5% 90%;
+    --popover: 217 50% 5%;
+    --popover-foreground: 217 5% 90%;
+    --primary: 217 93% 38%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 30% 20%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 179 30% 25%;
+    --muted-foreground: 217 5% 60%;
+    --accent: 179 30% 25%;
+    --accent-foreground: 217 5% 90%;
+    --destructive: 0 100% 30%;
+    --destructive-foreground: 217 5% 90%;
+    --border: 217 30% 26%;
+    --input: 217 30% 26%;
+    --ring: 217 93% 38%;
+    --radius: 0.5rem;
   }
 }
 
@@ -80,4 +56,14 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+/* Custom CSS to hide the scrollbar */
+
+.hide-scrollbar::-webkit-scrollbar-track {
+  display: none; /* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+  scrollbar-track-color: transparent;
 }

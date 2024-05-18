@@ -1,12 +1,15 @@
+"use client";
 import React from "react";
 import { ThreeDCardDemo } from "@/components/explore_cards";
 import { WavyBackground } from "@/components/ui/wavy-background";
+import { useTheme } from "next-themes";
 type Props = {};
 
 const Page = (props: Props) => {
+  const { theme } = useTheme();
   return (
     <WavyBackground
-      backgroundFill="white"
+      backgroundFill={theme === "dark" ? "#1A202C" : "#F7FAFC"}
       blur={5}
       waveWidth={100}
       className="flex md:flex-row flex-col h-screen w-screen items-center justify-center md:gap-10"
