@@ -13,6 +13,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { ModeToggle } from "./theme-toggle";
 import React from "react";
 
 type Props = {};
@@ -20,7 +21,6 @@ type Props = {};
 const Menu = (props: Props) => {
   const pathname = usePathname();
   if (pathname === "/") return null;
-  
 
   return (
     <NavigationMenu className="m-2">
@@ -31,6 +31,9 @@ const Menu = (props: Props) => {
               ← Go back to the Home Page
             </NavigationMenuLink>
           </Link>
+        </NavigationMenuItem>
+        <NavigationMenuItem>
+          <ModeToggle />
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>

@@ -3,6 +3,7 @@ import { Urbanist as FontSans } from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import Menu from "@/components/navigation";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -26,10 +27,17 @@ export default function RootLayout({
           fontSans.variable
         )}
       >
-        <nav className="fixed z-20 top-2 right-2">
-          <Menu />
-        </nav>
-        <main>{children}</main>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <nav className="fixed z-20 top-2 right-2">
+            <Menu />
+          </nav>
+          <main>{children}</main>
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -26,7 +26,7 @@ const words = [
 
 export function LandingPage() {
   return (
-    <div className="flex h-screen w-full flex-col items-center justify-center bg-gradient-to-r from-[#4338ca] to-[#89CFF0] px-4 md:px-6">
+    <div className="flex h-screen w-full flex-col items-center justify-center bg-gradient-to-r from-primary to-secondary px-4 md:px-6">
       <Meteors number={30} />
 
       <div className="space-y-4 text-center">
