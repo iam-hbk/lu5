@@ -66,12 +66,7 @@ function Security() {
             draggable={true}
           />
         </ContainerScroll>
-        <Image
-          alt="security_final"
-          src="/security_final.jpg"
-          width={500}
-          height={500}
-        />
+       
       </div>
     </FollowerPointerCard>
   );
