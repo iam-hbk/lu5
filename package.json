@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "@ai-sdk/openai": "^0.0.13",
     "@radix-ui/react-alert-dialog": "^1.0.5",
     "@radix-ui/react-dialog": "^1.0.5",
@@ -29,6 +30,7 @@
     "react": "^18",
     "react-day-picker": "^8.10.1",
     "react-dom": "^18",
+    "react-lottie": "^1.2.4",
     "react-responsive": "^10.0.0",
     "simplex-noise": "^4.0.1",
     "sonner": "^1.4.41",
