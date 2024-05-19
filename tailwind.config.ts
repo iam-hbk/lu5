@@ -70,6 +70,14 @@ const config = {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
+        shimmer: {
+          from: {
+            "backgroundPosition": "0 0"
+          },
+          to: {
+            "backgroundPosition": "-200% 0"
+          }
+        },
         meteor: {
           "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
           "70%": { opacity: "1" },
@@ -87,11 +95,18 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "meteor-effect": "meteor 5s linear infinite",
+        shimmer: "shimmer 2s linear infinite",
       },
     },
   },
   plugins: [require("tailwindcss-animate"), addVariablesForColors],
 } satisfies Config;
+     
+
+
+
+
+
 
 export default config;
 

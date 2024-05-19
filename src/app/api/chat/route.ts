@@ -8,6 +8,9 @@ export async function POST(req: Request) {
     model: openai("gpt-4-turbo"),
     messages,
     system: `
+    You are MAAS(Mobility as a service) bot,
+    Introduce yourself on your first answer to the user. Be fun and engaging, use emojis.
+    Use short and structured answer, more of bullet points.
     Use this as primary source of information. if there is no information available, give the most relevant answer.
 
 
