@@ -4,7 +4,7 @@ import { MacbookScroll } from "@/components/ui/macbook-scroll";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
 import { Link, ScrollTextIcon } from "lucide-react";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { FollowerPointerCard } from "@/components/ui/following-pointer";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Badge } from "@/components/ui/badge";
@@ -12,10 +12,31 @@ import { Player, Controls } from "@lottiefiles/react-lottie-player";
 import { Meteors } from "@/components/ui/meteors";
 import { TabletteScroll } from "@/components/tablette-scroll-animation";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import { Button } from "@/components/ui/button";
 
 function Security() {
+  const [show, setShow] = React.useState(false);
+  //initialize useref
+  const ref = React.createRef<HTMLDivElement>();
+
+  useEffect(() => {
+    if (show) {
+      Reveal();
+    }
+  }, [show]);
+
+  const Reveal = () => {
+    setTimeout(() => {
+      if (ref.current !== null) {
+        console.log("bref");
+        ref.current.scrollIntoView({ behavior: "smooth" });
+      } else {
+        console.log("Ref is null");
+      }
+    }, 500);
+  };
   return (
-    <FollowerPointerCard>
+    <>
       <Meteors number={50} />
       <div className="flex flex-col p-5 items-center min-h-screen bg-gradient-to-r from-primary to-blue-700 dark:to-secondary">
         <h2 className="scroll-m-20 mt-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -45,30 +66,41 @@ function Security() {
           <StickyScroll content={content} />
         </div>
 
-        <ContainerScroll
-          titleComponent={
-            <>
-              <h1 className="text-4xl font-semibold text-black dark:text-white">
-                Final <br />
-                <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                  Security Architecture
-                </span>
-              </h1>
-            </>
-          }
+        <button
+          onClick={() => setShow(true)}
+          className="m-5 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
         >
-          <Image
-            src={`/Security_final.jpg`}
-            alt="hero"
-            height={700}
-            width={400}
-            className="mx-auto rounded-2xl object-cover h-full object-left-top"
-            draggable={true}
-          />
-        </ContainerScroll>
-       
+          Reveal final architecture
+        </button>
+
+        {show && (
+          <ContainerScroll
+            titleComponent={
+              <>
+                <h1
+                  ref={ref}
+                  className="text-4xl font-semibold text-black dark:text-white"
+                >
+                  Final <br />
+                  <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                    Security Architecture
+                  </span>
+                </h1>
+              </>
+            }
+          >
+            <Image
+              src={`/Security_final.jpg`}
+              alt="hero"
+              height={700}
+              width={400}
+              className="mx-auto rounded-2xl object-cover h-full object-left-top"
+              draggable={true}
+            />
+          </ContainerScroll>
+        )}
       </div>
-    </FollowerPointerCard>
+    </>
   );
 }
 
