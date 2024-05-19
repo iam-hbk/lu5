@@ -37,69 +37,71 @@ function Security() {
   };
   return (
     <>
-      <Meteors number={50} />
-      <div className="flex flex-col p-5 items-center min-h-screen bg-gradient-to-r from-primary to-blue-700 dark:to-secondary">
-        <h2 className="scroll-m-20 mt-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
-          MaaS Security Architecture
-        </h2>
-        <p className="text-xl text-white w-[60%] p-8 text-center max-w-md min-w-[500px]">
-          Understanding each component of the security architecture and the
-          reason why they are chosen and what role they play in the architecture
-          🚀
-        </p>
-        <Alert className="max-w-screen-md m-2 mb-5">
-          <ScrollTextIcon className="h-4 w-4" />
-          <AlertTitle>Heads up!</AlertTitle>
-          <AlertDescription className="flex flex-row gap-1 items-center justify-start">
-            <span>You can scroll in the explanation </span>
-            <span className="p-1 border rounded-md bg-primary/5 text-xs">
-              Explanation Area
-            </span>
-          </AlertDescription>
-        </Alert>
-
-        <div className="flex items-start  flex-col justify-center">
-          <Badge className="p-2 mb-1" variant="outline">
+      <FollowerPointerCard>
+        <Meteors number={50} />
+        <div className="flex flex-col p-5 items-center min-h-screen bg-gradient-to-r from-primary to-blue-700 dark:to-secondary">
+          <h2 className="scroll-m-20 mt-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            MaaS Security Architecture
+          </h2>
+          <p className="text-xl text-white w-[60%] p-8 text-center max-w-md min-w-[500px]">
+            Understanding each component of the security architecture and the
+            reason why they are chosen and what role they play in the
+            architecture 🚀
+          </p>
+          <Alert className="max-w-screen-md m-2 mb-5">
             <ScrollTextIcon className="h-4 w-4" />
-            Explanation Area
-          </Badge>
-          <StickyScroll content={content} />
-        </div>
+            <AlertTitle>Heads up!</AlertTitle>
+            <AlertDescription className="flex flex-row gap-1 items-center justify-start">
+              <span>You can scroll in the explanation </span>
+              <span className="p-1 border rounded-md bg-primary/5 text-xs">
+                Explanation Area
+              </span>
+            </AlertDescription>
+          </Alert>
 
-        <button
-          onClick={() => setShow(true)}
-          className="m-5 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
-        >
-          Reveal final architecture
-        </button>
+          <div className="flex items-start  flex-col justify-center">
+            <Badge className="p-2 mb-1" variant="outline">
+              <ScrollTextIcon className="h-4 w-4" />
+              Explanation Area
+            </Badge>
+            <StickyScroll content={content} />
+          </div>
 
-        {show && (
-          <ContainerScroll
-            titleComponent={
-              <>
-                <h1
-                  ref={ref}
-                  className="text-4xl font-semibold text-black dark:text-white"
-                >
-                  Final <br />
-                  <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                    Security Architecture
-                  </span>
-                </h1>
-              </>
-            }
+          <button
+            onClick={() => setShow(true)}
+            className="m-5 inline-flex h-12 animate-shimmer items-center justify-center rounded-md border border-slate-800 bg-[linear-gradient(110deg,#000103,45%,#1e2631,55%,#000103)] bg-[length:200%_100%] px-6 font-medium text-slate-400 transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
           >
-            <Image
-              src={`/Security_final.jpg`}
-              alt="hero"
-              height={700}
-              width={400}
-              className="mx-auto rounded-2xl object-cover h-full object-left-top"
-              draggable={true}
-            />
-          </ContainerScroll>
-        )}
-      </div>
+            Reveal final architecture
+          </button>
+
+          {show && (
+            <ContainerScroll
+              titleComponent={
+                <>
+                  <h1
+                    ref={ref}
+                    className="text-4xl font-semibold text-black dark:text-white"
+                  >
+                    Final <br />
+                    <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
+                      Security Architecture
+                    </span>
+                  </h1>
+                </>
+              }
+            >
+              <Image
+                src={`/Security_final.jpg`}
+                alt="hero"
+                height={700}
+                width={400}
+                className="mx-auto rounded-2xl object-cover h-full object-left-top"
+                draggable={true}
+              />
+            </ContainerScroll>
+          )}
+        </div>
+      </FollowerPointerCard>
     </>
   );
 }
@@ -116,7 +118,7 @@ const content = [
         <Player
           autoplay
           loop
-          src="/encryption.json"
+          src="/Encryption.json"
           style={{ height: "300px", width: "300px" }}
         ></Player>
       </div>
