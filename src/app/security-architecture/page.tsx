@@ -37,7 +37,7 @@ function Security() {
   };
   return (
     <>
-      <FollowerPointerCard>
+      {/* <FollowerPointerCard> */}
         <Meteors number={50} />
         <div className="flex flex-col p-5 items-center min-h-screen bg-gradient-to-r from-primary to-blue-700 dark:to-secondary">
           <h2 className="scroll-m-20 mt-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
@@ -101,7 +101,7 @@ function Security() {
             </ContainerScroll>
           )}
         </div>
-      </FollowerPointerCard>
+      {/* </FollowerPointerCard> */}
     </>
   );
 }

@@ -47,22 +47,20 @@ const NetworkCarrousel = () => {
     <Carousel className="w-full ">
       <CarouselContent>
         <CarouselItem>
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center justify-center">
             <h3 className="text-xl">Data Flow Diagram at the Network Level</h3>
-            <div>
-              <Alert className="max-w-screen-md m-2 mb-5">
-                <AlertTitle>
-                  <Badge>
-                    Purpose <Target className="h-4 w-4" />
-                  </Badge>
-                </AlertTitle>
-                <AlertDescription className="flex flex-row gap-1 items-center justify-start">
-                  To visually represent the structure and layout of the network,
-                  showing how different nodes (devices, servers, etc.) are
-                  connected and communicate with each other.
-                </AlertDescription>
-              </Alert>
-            </div>
+            <Alert className="max-w-screen-md m-2 mb-5">
+              <AlertTitle>
+                <Badge>
+                  Purpose <Target className="h-4 w-4" />
+                </Badge>
+              </AlertTitle>
+              <AlertDescription className="flex flex-row gap-1 items-center justify-start">
+                To visually represent the structure and layout of the network,
+                showing how different nodes (devices, servers, etc.) are
+                connected and communicate with each other.
+              </AlertDescription>
+            </Alert>
             <Image
               src={"/Data Flow.svg"}
               alt="Data Flow Diagram"
@@ -73,23 +71,20 @@ const NetworkCarrousel = () => {
           </div>
         </CarouselItem>
         <CarouselItem>
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center justify-center">
             <h3 className="text-xl">Infrastructure Architecture</h3>
-            <div>
-              <Alert className="max-w-screen-md m-2 mb-5">
-                <AlertTitle>
-                  <Badge>
-                    Purpose <Target className="h-4 w-4" />
-                  </Badge>
-                </AlertTitle>
-                <AlertDescription className="flex flex-row gap-1 items-center justify-start">
-                  To provide detailed designs of the physical and virtual
-                  infrastructure supporting the MaaS platform, ensuring that all
-                  necessary components are accounted for and properly
-                  configured.
-                </AlertDescription>
-              </Alert>
-            </div>
+            <Alert className="max-w-screen-md m-2 mb-5">
+              <AlertTitle>
+                <Badge>
+                  Purpose <Target className="h-4 w-4" />
+                </Badge>
+              </AlertTitle>
+              <AlertDescription className="flex flex-row gap-1 items-center justify-start">
+                To provide detailed designs of the physical and virtual
+                infrastructure supporting the MaaS platform, ensuring that all
+                necessary components are accounted for and properly configured.
+              </AlertDescription>
+            </Alert>
             <Image
               src={"/Infrastructure Architecture.svg"}
               alt="Infrastructure Architecture Diagram"
@@ -100,22 +95,20 @@ const NetworkCarrousel = () => {
           </div>
         </CarouselItem>
         <CarouselItem>
-          <div className="flex flex-col">
+          <div className="flex flex-col items-center justify-center">
             <h3 className="text-xl">Communication Flowchart</h3>
-            <div>
-              <Alert className="max-w-screen-md m-2 mb-5">
-                <AlertTitle>
-                  <Badge>
-                    Purpose <Target className="h-4 w-4" />
-                  </Badge>
-                </AlertTitle>
-                <AlertDescription className="flex flex-row gap-1 items-center justify-start">
-                  To illustrate the data flow and communication protocols
-                  between different components of the MaaS platform, ensuring
-                  that data moves efficiently and securely across the network.
-                </AlertDescription>
-              </Alert>
-            </div>
+            <Alert className="max-w-screen-md m-2 mb-5">
+              <AlertTitle>
+                <Badge>
+                  Purpose <Target className="h-4 w-4" />
+                </Badge>
+              </AlertTitle>
+              <AlertDescription className="flex flex-row gap-1 items-center justify-start">
+                To illustrate the data flow and communication protocols between
+                different components of the MaaS platform, ensuring that data
+                moves efficiently and securely across the network.
+              </AlertDescription>
+            </Alert>
             <Image
               src={"/Communication Flowchart.svg"}
               alt="Communication Flowchart Diagram"
