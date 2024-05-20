@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import Menu from "@/components/navigation";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Toaster } from "@/components/ui/sonner";
+import { FollowerPointerCard } from "@/components/ui/following-pointer";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -34,11 +35,13 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <nav className="fixed z-20 top-2 right-2">
-            <Menu />
-          </nav>
-          <main>{children}</main>
-          <Toaster richColors />
+          <FollowerPointerCard>
+            <nav className="fixed z-20 top-2 right-2">
+              <Menu />
+            </nav>
+            <main>{children}</main>
+            <Toaster richColors />
+          </FollowerPointerCard>
         </ThemeProvider>
       </body>
     </html>

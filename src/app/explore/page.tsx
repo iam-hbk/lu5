@@ -9,7 +9,7 @@ type Props = {};
 const Page = (props: Props) => {
   const { theme } = useTheme();
   return (
-    <FollowerPointerCard>
+    // <FollowerPointerCard>
       <WavyBackground
         backgroundFill={theme === "dark" ? "#1A202C" : "#F7FAFC"}
         blur={5}
@@ -31,7 +31,7 @@ const Page = (props: Props) => {
           architecture_description="Security architecture is the strategic design of a system's defenses, detailing how all security measures and components work together. It begins with identifying potential threats and vulnerabilities, and defining security requirements. The design includes selecting and implementing technologies like firewalls, intrusion detection systems, and encryption protocols. It also involves setting up access controls, authentication mechanisms, and monitoring tools to detect and respond to threats."
         />
       </WavyBackground>
-    </FollowerPointerCard>
+    // </FollowerPointerCard>
   );
 };
 
